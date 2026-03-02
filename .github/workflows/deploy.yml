@@ -3,18 +3,18 @@ name: Deploy to WordPress.org
 on:
   push:
     tags:
-      - "*"
+      - '*'
 
 jobs:
-  deploy:
+  tag:
+    name: New tag
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: WordPress Plugin Deploy
-        uses: 10up/action-wordpress-plugin-deploy@stable
-        with:
-          svn_username: ${{ secrets.SVN_USERNAME }}
-          svn_password: ${{ secrets.SVN_PASSWORD }}
+      - name: Deploy to WordPress.org
+        uses: 10up/action-wordpress-plugin-deploy@v2
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
