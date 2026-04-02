@@ -5,7 +5,7 @@
 Plugin Name: Enable Virtual Card Upload - Vcard,Vcf
 Plugin URI: https://www.linkedin.com/in/avcodelord/
 Description: Enables upload of virtual card (vcf,vcard) files.
-Version: 2.3.1
+Version: 2.3.2
 Author: Amit verma
 Author URI: https://www.linkedin.com/in/avcodelord/
 Text Domain: enable-virtual-card-upload
